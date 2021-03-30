@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.3668a.vip/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Mar 2021 20:42:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DAY BET – A fast lottery platform</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            margin: 0 auto;
+            /*background: url("./assets/images/bg.jpg");*/
+            /*background-size: 100% auto;*/
+        }
+        .logo {
+            width: 150px;
+            z-index: 10;
+            position: absolute;
+            top: 15px;
+            left: 25px;
+        }
+        .bg {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .icons {
+        }
+        .icons img:nth-child(1) {
+            width: 650px;
+            z-index: 10;
+        }
+        .icons img:nth-child(2) {
+            z-index: 10;
+            width: 100%;
+            position: relative;
+            bottom: 60px;
+        }
+        .container-side {max-width: 414px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .container-side>img {
+            width: 400px;
+            z-index: 10;
+        }
+        .inside-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 155px;
+            margin-right: 16px;
+            margin-bottom: -5px;
+        }
+        .wrap a {
+            display: inline-block;
+            width: 100%;
+            z-index: 10;
+        }
+        .wrap a .down {
+            width: 100%;
+            height: 66px;
+        }
+        .wrap a .open {
+            width: 100%;
+            height: 50px;
+        }
+        .login {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 20;
+        }
+        .box-container {
+            width: 400px;
+            padding: 25px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: white;
+            z-index: 100;
+            position: relative;
+        }
+        .box-container img {
+            position: absolute;
+            right: -37px;
+            top: -37px;
+            width: 33px;
+        }
+        .tap span {
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .active {
+            color: #4d9bdd;
+            border-bottom: 3px solid #4d9bdd;
+        }
+        .tap span:nth-child(2) {
+            margin-left: 30px;
+        }
+        .login-box {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .account {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            background: #ececec;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            padding-left: 3px;
+			box-sizing: border-box;
+        }
+        .account span {
+            background: url("assets/images/account.png");
+            background-size: 100% 100%;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+        .account .lock {
+            background: url("assets/images/pwd.png") no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+        .account input {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            border: none;
+            background: #ececec;
+            outline: none;
+        }
+        .btn-forget {
+            position: absolute;
+            right: 26px;
+            top: 198px;
+            display: block;
+            text-decoration: none;
+        }
+        .btn-forget:hover {
+            color: #4d9bdd;
+            cursor: pointer;
+        }
+        .btn-login {
+            width: 100%;
+            height: 30px;
+            background: #4d9bdd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 15px 0 25px 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .btn {
+            width: 100%;
+            height: 30px;
+            background: #ececec;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .reg {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .reg .btn-login {
+            margin-bottom: 0 !important;
+        }
+        .reg .note {
+            background: url("assets/images/name.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .select {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .rear-part {
+            background: #ececec;
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+        .verification-icon {
+            background: url("assets/images/pwd.png");
+            background-size: 100% 100%;
+            margin-right: 0;
+            width: 25px;
+            position: relative;
+            height: 25px;
+            color: #e0e2e7;
+            font-size: 9px;
+            text-align: center;
+            margin-left: 3px
+        }
+        .input3 {
+            margin-left: 10px;
+            width: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .input3 input {
+            width: 25px;
+            height: 30px;
+            padding: 0;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid #c3bbbb;
+            text-align: center;
+        }
+        .cash {
+            margin-left: 42px;
+            color: #bbb6b6;
+        }
+        .el-message {
+            z-index: 99;
+            min-width: 380px;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ebeef5;
+            position: fixed;
+            left: 50%;
+            top: 70px;
+            transform: translateX(-50%);
+            background-color: #edf2fc;
+            transition: opacity .3s,transform .4s;
+            overflow: hidden;
+            padding: 11px 15px 15px 20px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            box-shadow: 0 10px 30px #525255;
+        }
+        .el-message__content {
+            padding: 0;
+            font-size: 14px;
+            line-height: 0;
+            color:#ff0000ad;
+        }
+    </style>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="login" style="display: none;">
+    <div class="box-container">
+        <img style="cursor: pointer" src="assets/images/close.png" onclick="$('.login').hide()" alt="">
+        <div class="tap">
+            <span id="login_span" onclick="open_login()" class="active">Log in</span>
+            <span id="reg_span" onclick="open_reg()">Sign up</span>
+        </div>
+        <form id="login_info" action="javascript:void(0);" autocomplete="off">
+            <div class="login-box" style="display: block">
+                <div class="account">
+                    <span></span>
+                    <input type="text" name="username" placeholder="Account" autocapiPathtalize="off">
+                </div>
+                <div class="account" style="margin-bottom: 37px;">
+                    <span class="lock"></span>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <a href="javascript:openKefuUrl()" class="btn-forget">Forget password ?</a>
+                <button onclick="login_ajax()" class="btn-login">Confirm</button>
+                <button onclick="visitor_login_ajax()" class="btn">Demo</button>
+            </div>
+        </form>
+        <form id="register_info" action="javascript:void(0);" autocomplete="off">
+            <div class="reg" style="display: none">
+                <div class="account">
+                    <span></span>
+                    <input type="text" name="username" placeholder="Account" autocapiPathtalize="off">
+                </div>
+                <div class="account" >
+                    <span class="lock"></span>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="account" >
+                    <span class="lock"></span>
+                    <input type="password" name="password2" placeholder="Vefify password">
+                </div>
+                <div class="account" >
+                    <span class="note"></span>
+                    <input type="text" name="realname" placeholder="Account name (Bank card name)">
+                </div>
+                <div class="select">
+                    <div class="rear-part">
+                        <span class="verification-icon"></span>
+                        <div class="input3">
+                            <input id="fundPassword_1" onkeyup="set_fundPassword(this.value, this.id)" maxLength=1 type="text" name="fundPassword[]">
+                            <input id="fundPassword_2" onkeyup="set_fundPassword(this.value, this.id)" maxLength=1 type="text" name="fundPassword[]">
+                            <input id="fundPassword_3" onkeyup="set_fundPassword(this.value, this.id)" maxLength=1 type="text" name="fundPassword[]">
+                            <input id="fundPassword_4" onkeyup="set_fundPassword(this.value, this.id)" maxLength=1 type="text" name="fundPassword[]">
+                        </div>
+                    </div>
+                    <div class="cash">Fund password</div>
+                </div>
+                <button class="btn-login" onclick="register_ajax()">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="el-message el-message--info" id="notice" style="display: none;">
+    <p class="el-message__content" id="notice_msg"></p>
+</div>
+<img src="assets/images/logo4.png" class="logo" alt="">
+<img src="assets/images/bg4.jpg" class="bg" alt="">
+<div class="container">
+    <div class="container-side">
+        <img src="assets/images/msg4.png" alt="">
+        <div class="inside-wrap">
+            <img style="width: 250px;margin: 30px;" src="assets/images/qr/qr.png" alt="">
+            <div class="wrap">
+                <a href="http://jiao03.com/apk/bet.apk"><img class="down" src="assets/images/btn-download4.png" alt="download"></a>
+                <a href="javascript:$('.login').show();open_login()"><img class="open" src="assets/images/btn-open4.png" alt="go and play"></a>
+            </div>
+        </div>
+    </div>
+    <div class="icons">
+        <img src="assets/images/icons4.png" alt="">
+    </div>
+</div>
+<script type="text/javascript">
+    function open_login()
+    {
+        $('#login_span').attr('class','active')
+        $('#reg_span').attr('class','')
+        $('.login-box').show()
+        $('.reg').hide()
+        $('input').val('')
+    }
+    function open_reg()
+    {
+        $('#login_span').attr('class','')
+        $('#reg_span').attr('class','active')
+        $('.login-box').hide()
+        $('.reg').show()
+        $('input').val('')
+    }
+    function set_fundPassword(value, id)
+    {
+        var result = value.replace(/\D+/g,'')
+        $('#'+id).val(result)
+        if(value.length != 0 && result.length == 1)
+        {
+            $('#'+id).next().focus()
+        }
+        if(value.length == 0)
+        {
+            $('#'+id).prev().focus()
+        }
+    }
+    // ajax提交登录信息
+    function login_ajax()
+    {
+        $.ajax({
+          url: 'index.php?r=user/login',
+          type: 'post',
+          data: $("#login_info").serialize(),
+          dataType:'json',
+          success: function(data)
+          {
+            if(data.code == 200)
+            {
+              // 登录成功
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#07f30f')
+              $("#notice").show()
+              setTimeout(function(){window.location.reload()}, 300)
+            }
+            else
+            {
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#ff0000ad')
+              $("#notice").show()
+              setTimeout(function(){$("#notice").hide()}, 2000)
+            }
+          }
+        })
+    }
+    // ajax提交登录信息（游客登录）
+    function visitor_login_ajax()
+    {
+        $.ajax({
+          url: 'index.php?r=user/visitor_login',
+          dataType:'json',
+          success: function(data)
+          {
+            if(data.code == 200)
+            {
+              // 登录成功，打开协议书
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#07f30f')
+              $("#notice").show()
+              setTimeout(function(){window.location.reload()}, 300)
+            }
+            else
+            {
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#ff0000ad')
+              $("#notice").show()
+              setTimeout(function(){$("#notice").hide()}, 2000)
+            }
+          }
+        })
+    }
+    // ajax提交注册信息
+    function register_ajax()
+    {
+        $.ajax({
+          url: 'index.php?r=user/register',
+          type: 'post',
+          data: $("#register_info").serialize(),
+          dataType:'json',
+          success: function(data)
+          {
+            if(data.code == 200)
+            {
+              // 注册成功，打开协议书
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#07f30f')
+              $("#notice").show()
+              setTimeout(function(){window.location.reload()}, 300)
+            }
+            else
+            {
+              $("#notice_msg").html(data.msg)
+              $("#notice_msg").css('color', '#ff0000ad')
+              $("#notice").show()
+              setTimeout(function(){$("#notice").hide()}, 2000)
+            }
+          }
+        })
+    }
+    // 打开第三方客服
+    function openKefuUrl()
+    {
+      window.open('https://vue.livelyhelp.chat/chatwindow.aspx?platform=4a06-4ce4-926f-12e26e1043fa&amp;planId=186&amp;code=2abc&amp;siteId=5001659&amp;new=1&amp;Skill=English&amp;Product=LiveChat', "newwindow", "height=600, width=620, top=50, left=450, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no");
+    }
+</script>
+</body>
+
+<!-- Mirrored from www.3668a.vip/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Mar 2021 20:42:23 GMT -->
+</html>

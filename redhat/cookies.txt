@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.3668a.vip	TRUE	/	FALSE	1999999999	__cfduid	da8f9efdbd0207feb62547b254fa4b1731617136930
+www.3668a.vip	TRUE	/	FALSE	1999999999	SameSite	Lax
+www.3668a.vip	TRUE	/	FALSE	1999999999	PHPSESSID	sn2gekm5624senmukjibrmvob7
+
